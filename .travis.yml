@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
-  docker build -t dandakiran/docker-react -f Dockerfile.dev
+  - docker build -t dandakiran/docker-react -f Dockerfile.dev
 script:
-  docker run dandakiran/docker-react npm run test -- --coverage
+  - docker run dandakiran/docker-react npm run test -- --coverage
 
